@@ -1,0 +1,23 @@
+____   _____________ _________  ________  ________  ___________
+\   \ /   /   _____/ \_   ___ \ \_____  \ \______ \ \_   _____/
+ \   Y   /\_____  \  /    \  \/  /   |   \ |    |  \ |    __)_ 
+  \     / /        \ \     \____/    |    \|    `   \|        \
+   \___/ /_______  /  \______  /\_______  /_______  /_______  /
+                 \/          \/         \/        \/        \/ 
+
+List of extensions used by MTCreator at 17:12 04-Oct-18
+Output of: code --listextensions
+
+    abusaidm.html-snippets
+    ecmel.vscode-html-css
+    GrapeCity.gc-excelviewer
+    Gruntfuggly.todo-tree
+    Ikuyadeu.r
+    Ikuyadeu.r-lsp
+    ms-python.python
+    redhat.java
+    tomoki1207.pdf
+    vscjava.vscode-java-debug
+    vscjava.vscode-java-pack
+    vscjava.vscode-java-test
+    xaver.clang-format
