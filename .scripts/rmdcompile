@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Compile RMarkDown
+
+echo "require(rmarkdown);render(\"$1\")" | R --vanilla;
