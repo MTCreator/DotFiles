@@ -6,8 +6,8 @@
 
 export PATH="$PATH:$HOME/.scripts"
 #export EDITOR=""
-#export TERMINAL=""
-#export BROWSER=""
+export TERMINAL="xfce4-terminal"
+export BROWSER="chromium"
 #export TRUEBROWSER=""
 #export READER=""
 

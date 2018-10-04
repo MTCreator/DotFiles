@@ -27,6 +27,24 @@ font Noto Sans Mono:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# gaps
+gaps inner 5
+gaps outer 5
+
+# Start external scripts
+# Setting the background:
+exec_always --no-startup-id setwallpaper
+
+# Start the clipboard manager
+exec_always --no-startup-id xfce4-clipman
+
+# Start Discord
+exec_always --no-startup-id discord
+
+# Unclutter makes the mouse invisible after a brief period
+exec --no-startup-id unclutter
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -216,3 +234,9 @@ focus_follows_mouse no
 # Scratchpad
 bindsym $mod+Shift+s move scratchpad
 bindsym $mod+Shift+d scratchpad show
+
+# Freeze/No Distraction mode
+set $freeze Distraction-free mode (mod+shift+esc to exit)
+mode "$freeze" { bindsym $mod+Shift+Escape mode "default"
+}
+bindsym $mod+Shift+f		mode "$freeze"

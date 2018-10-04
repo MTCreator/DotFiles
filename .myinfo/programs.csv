@@ -86,3 +86,4 @@ A,vim-pathogen,manages vim plugins
 ,zathura,is a pdf viewer with vim-like bindings
 ,zathura-djvu,gives zathura the ability to read .djvu files
 ,zathura-pdf-mupdf,allows mupdf pdf compatibility in zathura
+,xfce4-terminal,
