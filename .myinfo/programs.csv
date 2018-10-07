@@ -1,8 +1,12 @@
 TAG,NAME IN REPO (or git url),PURPOSE (should be a verb phrase to sound right while installing)
+,base-devel,is a group package with sudo and compilation software
+,git,is a version control system
+,i3-gaps,is the main graphical user interface and window manager
+,xorg-server,is the graphical server
+,xorg-xdpyinfo,retrieves screen information for some scripts
+,xorg-xinit,starts the graphical server
 ,arandr,is a UI for screen adjustment
 ,atool,manages and gives information about archives
-,base-devel,is a group package with sudo and compilation software
-,bash,The GNU Bourne Again shell
 ,bash-completion,
 ,calcurse,is a lightweight terminal-based calendar
 ,chromium,Access the Internet
@@ -17,7 +21,6 @@ TAG,NAME IN REPO (or git url),PURPOSE (should be a verb phrase to sound right wh
 ,fzf,is a fuzzy finder tool
 ,gftp,FTP client
 ,gimp,Paint
-,git,is a version control system
 ,gnome-keyring,serves as the system keyring
 ,gnu-netcat,
 ,gparted,
@@ -26,7 +29,6 @@ TAG,NAME IN REPO (or git url),PURPOSE (should be a verb phrase to sound right wh
 ,hplib,HP device manager (for printer)
 ,htop,provides system usage information and displays processes
 G,https://github.com/alexanderjeurissen/ranger_devicons.git,gives folder and file icons in ranger
-,i3-gaps,is the main graphical user interface and window manager
 ,i3lock,is the screen lock
 ,mediainfo,shows audio and video information and is used by ranger as well
 ,mpc,is a terminal interface for mpd
@@ -77,9 +79,6 @@ A,vim-pathogen,manages vim plugins
 ,xfce4-pulseaudio-plugin,
 ,xfce4-screenshooter,
 ,xfce4-whiskermenu-plugin,
-,xorg-server,is the graphical server
-,xorg-xdpyinfo,retrieves screen information for some scripts
-,xorg-xinit,starts the graphical server
 ,xssstate,times out the screen if locked
 ,youtube-dl,can download any YouTube video (or playlist or channel) when given the link
 ,youtube-viewer,is a terminal interface for watching YouTube videos without a browser
