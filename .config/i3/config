@@ -29,7 +29,7 @@ font Noto Sans Mono:monospace 8
 
 # gaps
 gaps inner 5
-gaps outer 5
+gaps outer 0
 
 # Start external scripts
 # Setting the background:
