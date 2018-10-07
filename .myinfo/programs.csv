@@ -5,6 +5,7 @@ TAG,NAME IN REPO (or git url),PURPOSE (should be a verb phrase to sound right wh
 ,xorg-server,is the graphical server
 ,xorg-xdpyinfo,retrieves screen information for some scripts
 ,xorg-xinit,starts the graphical server
+,yay,aurhelper
 ,arandr,is a UI for screen adjustment
 ,atool,manages and gives information about archives
 ,bash-completion,
