@@ -206,7 +206,7 @@ putgitrepo "https://github.com/LukeSmithxyz/mozillarbs.git" "/home/$name/.mozill
 serviceinit NetworkManager cronie
 
 # Most important command! Get rid of the beep!
-systembeepoff
+# systembeepoff
 
 # This line, overwriting the `newperms` command above will allow the user to run
 # serveral important commands, `shutdown`, `reboot`, updating, etc. without a password.
