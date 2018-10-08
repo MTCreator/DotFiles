@@ -87,3 +87,4 @@ A,vim-pathogen,manages vim plugins
 ,zathura-djvu,gives zathura the ability to read .djvu files
 ,zathura-pdf-mupdf,allows mupdf pdf compatibility in zathura
 ,xfce4-terminal,
+,code, VSCode
