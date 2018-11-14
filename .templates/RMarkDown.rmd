@@ -1,0 +1,15 @@
+---
+title: "Title"
+output: pdf_document
+author: "Mike Vandersanden, 1642883"
+date: date
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhead[CO,CE]{Mike Vandersanden, 1642883}
+- \fancyfoot[CO,CE]{Foot}
+- \fancyfoot[LE,RO]{\thepage}
+---
+
+# Title

@@ -18,8 +18,10 @@ alias aur='aurman'
 alias screenfetch='screenfetch -A Windows -D Windows'
 alias neofetch='screenfetch'
 alias update='aur -Syu'
-alias yt="youtube-dl --add-metadata -ic" # Download video link
-alias yta="youtube-dl --add-metadata -xic" # Download only audio
+alias yt="youtube-dl --add-metadata -ic -o ~/Movies/%\(title\)s.%\(ext\)s" # Download video link
+alias yta="youtube-dl --add-metadata -xic -o ~/Music/%\(title\)s.%\(ext\)s --audio-format mp3" # Download only audio
+alias scrot="scrot '%Y-%m-%d_\$wx\$h_scrot.png' -e 'mv \$f ~/Pictures/Screenshots/'"
+alias listorphans="echo '>yay -Qtdq' && yay -Qtdq"
 
 #old PS1 with color [mike@mikeArch folder]$
 #PS1='[\[\e[31m\]\u\[\e[39m\]@\h \W]\$ '

@@ -2,7 +2,7 @@
     "editor.fontSize": 12,
     "editor.wordWrap": "on",
     "editor.formatOnSave": true,
-    "editor.fontFamily": "'Noto Sans Mono', 'monospace', monospace, 'Noto Sans Fallback'",
+    "editor.fontFamily": "'Noto Sans Mono',  'monospace', monospace, 'Noto Sans Fallback'",
     "editor.minimap.enabled": false,
     "java.format.enabled": false,
     "html.format.enable": false,
@@ -16,5 +16,7 @@
     },
     "python.pythonPath": "/usr/bin/python2.7",
     "python.linting.enabled": false,
-    "python.formatting.provider": "black",
+    "python.formatting.provider": "autopep8",
+    "python.jediEnabled": false,
+    "window.zoomLevel": 0,
 }

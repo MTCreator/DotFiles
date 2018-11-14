@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if ! [ -z $(acpi -b | grep -E -o 'Charging') ]
+then
+    BATCHRG="⚡"
+fi
+
+BAT=$(sudo tlp-stat | grep -w "Charge total" | grep -o "[0-9]\{1,3\}.[0-9]\{1,2\}")
+
+# Full and short texts
+echo "$BATCHRG$BAT%"
+echo "$BAT%"
+
+BATINT=$(printf "%.0f\n" "$BAT")
+
+# Set urgent flag below 5% or use orange below 20%
+[ $BATINT -le 10 ] && notify-send 'Low Battery!' 'Battery levels are critical Please get your charger!' -u critical -i battery-caution && fprintled 1 red && exit 33
+[ $BATINT -le 20 ] && [ -z $BATCHRG ] && echo "#FF8000"
+
+exit 0
