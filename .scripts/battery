@@ -1,5 +1,6 @@
 #!/bin/bash
 
+BATCHR=''
 if ! [ -z $(acpi -b | grep -E -o 'Charging') ]
 then
     BATCHRG="⚡"
@@ -14,7 +15,8 @@ echo "$BAT%"
 BATINT=$(printf "%.0f\n" "$BAT")
 
 # Set urgent flag below 5% or use orange below 20%
-[ $BATINT -le 10 ] && notify-send 'Low Battery!' 'Battery levels are critical Please get your charger!' -u critical -i battery-caution && fprintled 1 red && exit 33
-[ $BATINT -le 20 ] && [ -z $BATCHRG ] && echo "#FF8000"
+[ $BATINT -le 15 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'Battery levels are critical Please get your charger!' -u critical -i battery-caution && 
+fprintled 1 red && exit 33
+[ $BATINT -le 25 ] && echo "#f4e242"
 
 exit 0

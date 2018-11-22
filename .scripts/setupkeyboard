@@ -1,0 +1,3 @@
+#!/bin/bash
+#Author: Mike Vandersanden
+xmodmap ~/.Xmodmap
