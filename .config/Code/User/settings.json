@@ -19,4 +19,5 @@
     "python.formatting.provider": "autopep8",
     "python.jediEnabled": false,
     "window.zoomLevel": 0,
+    "terminal.integrated.rendererType": "dom",
 }
