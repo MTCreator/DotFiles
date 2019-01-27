@@ -1,4 +1,20 @@
 #!/bin/bash
-xrandr --output HDMI-2 --auto --above eDP-1
+
+if ! [[ -z $(xrandr | grep -E -o "HDMI-2 connected") ]]
+then
+    xrandr --output HDMI-2 --auto --above eDP-1
+else
+    xrandr --output HDMI-2 --off
+fi
+
+if ! [[ -z $(xrandr | grep -E -o "DP-1 connected") ]]
+then
+    xrandr --output DP-1 --auto --left-of eDP-1
+else
+    xrandr --output DP-1 --off
+fi
+
 # Calibrate touchscreen
-xinput --map-to-output 'Melfas LGD AIT Touch Controller' eDP-1
+maptouchscreen
+
+i3-msg restart

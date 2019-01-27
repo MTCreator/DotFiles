@@ -2,7 +2,7 @@
 title: "Title"
 output: pdf_document
 author: "Mike Vandersanden, 1642883"
-date: date
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
 header-includes:
 - \usepackage{fancyhdr}
 - \usepackage{lipsum}
@@ -11,5 +11,7 @@ header-includes:
 - \fancyfoot[CO,CE]{Foot}
 - \fancyfoot[LE,RO]{\thepage}
 ---
+
+\newcommand{\n}{\newline}
 
 # Title

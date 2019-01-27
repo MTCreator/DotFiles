@@ -1,0 +1,49 @@
+#!/bin/bash
+#Author: Mike Vandersanden
+
+I3MSG=$(command -v i3-msg) || exit 1
+JQ=$(command -v jq) || exit 2
+
+WORKSPACES=$($I3MSG -t get_tree | $JQ '.nodes | .[] | select(.name != "__i3") | .nodes | .[] | select(.type == "con") | .nodes | .[]')
+
+NAMES=($(echo $WORKSPACES | $JQ .name ))
+
+for name in ${NAMES[@]}
+do
+    OBJ=$(echo $WORKSPACES | $JQ "select(.name == $name)")
+    NAME=$(echo $OBJ | $JQ '.num')
+    APPS=($(echo $OBJ | $JQ '.nodes | .[] | .window_properties.class' | tr -d '"'))
+
+    for app in ${APPS[@]}
+    do
+        echo $app
+        case $app in
+            "discord")
+                NAME+=""
+                ;;
+            "Xfce4-terminal")
+                NAME+=""
+                ;;
+            "Code")
+                NAME+=""
+                ;;
+            "Gimp")
+                NAME+=""
+                ;;
+            "Spotify")
+                NAME+=""
+                ;;
+            "Chromium")
+                NAME+=""
+                ;;
+            "Tasque")
+                NAME+=""
+                ;;
+            "Thunar")
+                NAME+=""
+                ;;
+        esac
+    done
+    
+    $I3MSG rename workspace $name to $NAME
+done

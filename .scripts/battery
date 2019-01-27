@@ -15,8 +15,8 @@ echo "$BAT%"
 BATINT=$(printf "%.0f\n" "$BAT")
 
 # Set urgent flag below 5% or use orange below 20%
-[ $BATINT -le 15 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'Battery levels are critical Please get your charger!' -u critical -i battery-caution && 
-fprintled 1 red && exit 33
-[ $BATINT -le 25 ] && echo "#f4e242"
+[ $BATINT -le 15 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'POWER LEVELS ARE CRITICAL!' -u critical -i battery-caution && echo "Power levels 
+are critical" | espeak -q  && fprintled 1 red && exit 33
+[ $BATINT -le 25 ] && notify-send 'Low-ish Battery' 'Get your charger ready' -u normal -i battery-low  && echo "#f4e242"
 
 exit 0

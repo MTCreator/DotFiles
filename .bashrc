@@ -15,13 +15,17 @@ shopt -s autocd #Auto cd into directory
 alias ls='ls -a --color=auto'
 alias lse='ls_extended -l'
 alias aur='aurman'
-alias screenfetch='screenfetch -A Windows -D Windows'
-alias neofetch='screenfetch'
+# alias screenfetch='screenfetch -A Windows -D Windows'
+# alias neofetch='screenfetch'
 alias update='aur -Syu'
 alias yt="youtube-dl --add-metadata -ic -o ~/Movies/%\(title\)s.%\(ext\)s" # Download video link
-alias yta="youtube-dl --add-metadata -xic -o ~/Music/%\(title\)s.%\(ext\)s --audio-format mp3" # Download only audio
+alias yta="youtube-dl -x --add-metadata -f bestaudio -o ~/Music/%\(title\)s.%\(ext\)s --audio-format mp3" # Download only audio
 alias scrot="scrot '%Y-%m-%d_\$wx\$h_scrot.png' -e 'mv \$f ~/Pictures/Screenshots/'"
+alias musicvisualizer="cava"
 alias listorphans="echo '>yay -Qtdq' && yay -Qtdq"
+alias locknsuspend="lockscreen && systemctl suspend"
+alias musicvisualizer="cava"
+alias updatetime="sudo ntpdate 1.ro.pool.ntp.org"
 
 #old PS1 with color [mike@mikeArch folder]$
 #PS1='[\[\e[31m\]\u\[\e[39m\]@\h \W]\$ '

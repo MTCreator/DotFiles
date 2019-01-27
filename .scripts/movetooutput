@@ -4,4 +4,4 @@
 I3MSG=$(command -v i3-msg) || exit 1
 JQ=$(command -v jq) || exit 2
 
-$I3MSG -t command move workspace to output $($I3MSG -t get_outputs | $JQ '.[] | select(.active == true) | .name' | tr -d '"' | dmenu -i -fn Symbola-12 "$@") 
+$I3MSG -t command move workspace to output $($I3MSG -t get_outputs | $JQ '.[] | select(.active == true) | .name' | tr -d '"' | dmenu -i -fn Awesome-10 "$@") 

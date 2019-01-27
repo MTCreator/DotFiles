@@ -1,0 +1,2 @@
+#!/bin/bash
+xinput --map-to-output 'Melfas LGD AIT Touch Controller' eDP-1

@@ -20,4 +20,10 @@
     "python.jediEnabled": false,
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
+    "files.autoSave": "onFocusChange",
+    "markdown.preview.breaks": true,
+    "editor.formatOnPaste": true,
+    "git.autofetch": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Activate UMBRA protocol",
 }
