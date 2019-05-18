@@ -25,5 +25,43 @@
     "editor.formatOnPaste": true,
     "git.autofetch": true,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Activate UMBRA protocol",
+    "workbench.colorTheme": "monokai-chacoral(HC)",
+    "sshfs.configs": [
+        {
+            "label": "ALARMpiWebsite",
+            "root": "/home/alarm/website",
+            "host": "mtcreator.ddns.net",
+            "port": 22,
+            "username": "alarm",
+            "password": true,
+            "name": "alarmpi"
+        },
+        {
+            "label": "ALARMpiHcalsite",
+            "root": "/home/alarm/hcalsite",
+            "host": "mtcreator.ddns.net",
+            "port": 22,
+            "username": "alarm",
+            "password": true,
+            "name": "ALARMpiHcalsite"
+        },
+        {
+            "label": "ALARMpiHcalsite",
+            "root": "/home/alarm/hcalsite",
+            "host": "mtcreator.ddns.net",
+            "port": 22,
+            "username": "alarm",
+            "password": true,
+            "name": "alarmpihcalsite"
+        }
+    ],
+    "git.confirmSync": false,
+    "window.titleBarStyle": "custom",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "docker.groupImagesBy": "None",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
 }
