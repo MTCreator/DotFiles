@@ -40,14 +40,14 @@ exec_always --no-startup-id setupkeyboard
 # Start external scripts
 # Setting the background:
 exec_always --no-startup-id xsetroot -solid "#008080"
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
+#exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
+exec_always --no-startup-id feh --bg-max ~/Pictures/PepeCoatOfArms.png
 
 # Composite manager:
-exec --no-startup-id compton
+exec --no-startup-id compton --config .config/compton.conf
 
 # Start the clipboard manager
 #exec_always --no-startup-id clipmenud
-exec_always --no-startup-id parcellite -d
 
 # Starts dunst for notifications:
 exec_always --no-startup-id dunst
@@ -62,7 +62,7 @@ exec_always --no-startup-id unclutter
 exec --no-startup-id nm-applet
 
 # TODO list
-exec --no-startup-id tasque
+#exec --no-startup-id tasque
 
 # tap to click
 exec_always --no-startup-id xinput set-prop 12 284 1
@@ -201,6 +201,9 @@ bindsym $hyp+o exec movetooutput
 #for_window [class="Gimp"] move workspace $w5
 #for_window [title="Discord"] move workspace $w1
 #for_window [title="Tasque"] move workspace $w1
+for_window [class="minecraft-launcher"] floating enable
+for_window [class="steam_app_32370"] floating enable
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -325,4 +328,4 @@ bindsym XF86MonBrightnessUp	exec --no-startup-id light -A 10 && notify-send -t 5
 bindsym XF86Tools               exec code ~/.config/i3/config
 
 #Rename workspaces //TODO interval
-exec watch dynamic_rename -n 15
+#exec watch dynamic_rename -n 15

@@ -14,9 +14,37 @@ do
     NAME=$(echo $OBJ | $JQ '.num')
     APPS=($(echo $OBJ | $JQ '.nodes | .[] | .window_properties.class' | tr -d '"'))
 
-    for app in ${APPS[@]}
+    i=0
+    while [[ i -lt ${#APPS[@]} ]]
     do
+        app=${APPS[i]}
         echo $app
+        if [ $app == "null" ]
+            then
+                newAPPS=()
+                nullNODES=$(echo $OBJ | $JQ '.nodes | .[] | .nodes | .[]')
+                nullAPPS=($(echo $nullNODES | $JQ '.window_properties.class' | tr -d '"'))
+
+                for nullAPP in ${nullAPPS[@]}
+                do
+                    if [ $nullAPP != "null" ]
+                        then
+                            newAPPS+=($nullAPP)
+                    else
+                        lastAPPS=($(echo $nullNODES | $JQ '.nodes | .[] | .window_properties.class' | tr -d '"'))
+                        for lastAPP in ${lastAPPS[@]}
+                        do
+                            if [ $lastAPP != "null" ]
+                                then
+                                    newAPPS+=($lastAPP)
+                            fi
+
+                        done
+                    fi 
+                done
+                APPS+=(${newAPPS[@]})
+        fi
+
         case $app in
             "discord")
                 NAME+=""
@@ -42,8 +70,14 @@ do
             "Thunar")
                 NAME+=""
                 ;;
+            "Evince")
+                NAME+=""
+                ;;
+            "mpv")
+                NAME+=""
+                ;;
         esac
+        i=$(( $i + 1 ))
     done
-    
     $I3MSG rename workspace $name to $NAME
 done

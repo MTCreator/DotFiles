@@ -1,0 +1,3 @@
+#!/bin/sh
+cat voorbeeld.invoer | python $1 > scriptout
+diff voorbeeld.uitvoer scriptout

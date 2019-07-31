@@ -12,6 +12,8 @@ shopt -s autocd #Auto cd into directory
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias startx='startx ~/.xinitrc'
+
 alias ls='ls -a --color=auto'
 alias lse='ls_extended -l'
 alias aur='aurman'
@@ -31,7 +33,7 @@ alias updatetime="sudo ntpdate 1.ro.pool.ntp.org"
 #PS1='[\[\e[31m\]\u\[\e[39m\]@\h \W]\$ '
 
 #microsoft PS1
-PS1="C:/\W>\[$(tput sgr0)\]"
+PS1="🔥:/\W>\[$(tput sgr0)\]"
 
 #microsoft aliases
 alias dir='ls -l'
@@ -47,4 +49,4 @@ if [[ $LANG = '' ]]; then
 fi
 
 #windows 95 prompt text
-printf "\nMicrosoft(R) Windows 95\n\t(C)Copyright Microsoft Corp 1981-1995.\n\n"
+printf "\nMemesoft(R) LinuxOS 77\n\t(C)Copyright Memesoft Corp 1999-2019.\n\n"
