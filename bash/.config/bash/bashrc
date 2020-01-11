@@ -24,7 +24,7 @@ alias updatetime="sudo ntpdate 1.ro.pool.ntp.org"
 #PS1='[\[\e[31m\]\u\[\e[39m\]@\h \W]\$ '
 
 #microsoft PS1
-PS1="🔥:/\W>\[$(tput sgr0)\]"
+PS1="C:/\W>\[$(tput sgr0)\]"
 
 if [[ $LANG = '' ]]; then
 	export LANG=en_US.UTF-8

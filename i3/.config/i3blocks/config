@@ -28,12 +28,16 @@ command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+#https://github.com/vivien/i3blocks-contrib
+#community blocks
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
+command=i3blocks-volume
 #label=VOL
 label=🎵
 instance=Master
@@ -70,18 +74,21 @@ signal=10
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
+command=i3blocks-iface
 label=📡
 #instance=wlan0
 color=#00FF00
 interval=30
 separator=false
 
-[wifi]
+#[wifi]
+#command=i3blocks-wifi
 #instance=wlp3s0
-interval=30
-separator=false
+#interval=30
+#separator=false
 
 [bandwidth]
+command=i3blocks-bandwith
 #instance=eth0
 interval=5
 

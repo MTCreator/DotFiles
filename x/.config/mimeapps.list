@@ -1,0 +1,9 @@
+[Added Associations]
+
+[Default Applications]
+video/mpeg=mpv.desktop
+inode/directory=Thunar.desktop
+video/mpg=mpv.desktop
+image/png=feh.desktop
+image/jgp=feh.desktop
+image/gif=mpv.desktop

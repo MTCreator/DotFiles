@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xrandr --output HDMI2 --same-as eDP1
+xrandr --output DP2 --same-as eDP1

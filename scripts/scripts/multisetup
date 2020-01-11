@@ -1,17 +1,17 @@
 #!/bin/bash
 
-if ! [[ -z $(xrandr | grep -E -o "HDMI-2 connected") ]]
+if ! [[ -z $(xrandr | grep -E -o "HDMI2 connected") ]]
 then
-    xrandr --output HDMI-2 --auto --above eDP-1
+    xrandr --output HDMI2 --auto --above eDP1
 else
-    xrandr --output HDMI-2 --off
+    xrandr --output HDMI2 --off
 fi
 
-if ! [[ -z $(xrandr | grep -E -o "DP-1 connected") ]]
+if ! [[ -z $(xrandr | grep -E -o "DP1 connected") ]]
 then
-    xrandr --output DP-1 --auto --left-of eDP-1
+    xrandr --output DP1 --auto --left-of eDP1
 else
-    xrandr --output DP-1 --off
+    xrandr --output DP1 --off
 fi
 
 # Calibrate touchscreen
