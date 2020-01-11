@@ -3,7 +3,7 @@
 #
 # simple screenshot-script using scrot for manjaro-i3 by oberon@manjaro.org
 
-_conf=$HOME/.config/i3-scrot.conf
+_conf=$HOME/.config/scrot/i3-scrot.conf
 
 if ! [ -f $_conf ]; then
     echo "scrot_dir=$(xdg-user-dir PICTURES)" > $_conf
