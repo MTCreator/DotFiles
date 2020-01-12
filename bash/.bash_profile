@@ -4,7 +4,7 @@
 
 # Profile file. Runs on login.
 
-export PATH="$PATH:$HOME/scripts"
+export PATH="$PATH:$HOME/Scripts"
 #export EDITOR=""
 export TERMINAL="xfce4-terminal"
 export BROWSER="chromium"
@@ -15,4 +15,4 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-[[ -f ~/.config/bash/bashrc ]] && source ~/.config/bash/bashrc
+[[ -f ~/.bashrc ]] && source ~/.bashrc
