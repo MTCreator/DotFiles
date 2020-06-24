@@ -38,7 +38,7 @@ exec_always --no-startup-id setupkeyboard
 exec_always --no-startup-id xsetroot -solid "1a1a1a"
 #exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 #exec_always --no-startup-id feh --bg-max ~/Pictures/PepeCoatOfArms.png
-exec_always --no-startup-id set_cave_background
+exec_always --no-startup-id customwall
 
 # Composite manager:
 #exec --no-startup-id compton --config .config/compton.conf
