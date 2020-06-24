@@ -10,7 +10,6 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $hyp Mod3
 #set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -49,7 +48,7 @@ exec_always --no-startup-id dunst
 
 # Start Discord/Slack
 exec --no-startup-id discord
-exec --no-startup-id slack
+# exec --no-startup-id slack
 
 # Unclutter makes the mouse invisible after a brief period
 exec_always --no-startup-id unclutter
@@ -127,9 +126,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $hyp+s layout stacking
-bindsym $hyp+w layout tabbed
-bindsym $hyp+e layout toggle split
+bindsym Ctrl+$mod+s layout stacking
+bindsym Ctrl+$mod+w layout tabbed
+bindsym Ctrl+$mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -179,15 +178,15 @@ bindsym $mod+Shift+9 move container to workspace number $w9
 bindsym $mod+Shift+0 move container to workspace number $w10
 
 # Rename workspace.
-bindsym $hyp+r exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+bindsym Ctrl+$mod+r exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # Show all tags and allow user to select one though dmenu.
-bindsym $hyp+m exec i3-dtags
+bindsym Ctrl+$mod+m exec i3-dtags
 # Show tags, and move the current window to the one selected using dmenu.
-bindsym $hyp+Mod1+m exec i3-dtags-moveto
+bindsym Ctrl+$mod+Mod1+m exec i3-dtags-moveto
 
 # Move workspace to output
-bindsym $hyp+o exec movetooutput
+bindsym Ctrl+$mod+o exec movetooutput
 
 #for_window [title="GIMP Startup"] move workspace $w5
 #for_window [class="Gimp"] move workspace $w5
@@ -206,8 +205,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 
 #Lock Screen
-bindsym Control+mod1+l exec --no-startup-id lockscreen
-bindsym $hyp+$mod+l exec --no-startup-id lockscreen && systemctl suspend
+bindsym Ctrl+mod1+l exec --no-startup-id lockscreen
+bindsym Ctrl+$mod+l exec --no-startup-id lockscreen && systemctl suspend
 
 # resize window (you can also use the mouse for that)
 #mode "resize" {
