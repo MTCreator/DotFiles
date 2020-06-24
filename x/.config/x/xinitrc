@@ -16,6 +16,7 @@ case $session in
     i3|i3wm           ) exec i3;;
     sway|swaywm       ) export XKB_DEFAULT_LAYOUT=be; exec sway;;
     awesome           ) exec awesome;;
+    emacs             ) exec emacs;;
     # No known session, try to run it as command
     *                 ) exec $1;;
 esac
