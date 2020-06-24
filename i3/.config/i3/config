@@ -235,10 +235,10 @@ bindsym Ctrl+$mod+l exec --no-startup-id lockscreen && systemctl suspend
 #bindsym $mod+r mode "resize"
 
 # Natural resize
-bindsym $mod+Shift+y		exec --no-startup-id "bash ~/.scripts/i3resize left"
-bindsym $mod+Shift+u		exec --no-startup-id "bash ~/.scripts/i3resize down"
-bindsym $mod+Shift+i		exec --no-startup-id "bash ~/.scripts/i3resize up"
-bindsym $mod+Shift+o		exec --no-startup-id "bash ~/.scripts/i3resize right"
+bindsym $mod+Shift+y		exec --no-startup-id "bash ~/Scripts/i3resize left"
+bindsym $mod+Shift+u		exec --no-startup-id "bash ~/Scripts/i3resize down"
+bindsym $mod+Shift+i		exec --no-startup-id "bash ~/Scripts/i3resize up"
+bindsym $mod+Shift+o		exec --no-startup-id "bash ~/Scripts/i3resize right"
 
 set_from_resource $bg background #008080
 set_from_resource $fg foreground #f3f4f5
