@@ -20,7 +20,7 @@ alias yt="youtube-dl --add-metadata -ic -o ~/Movies/%\(title\)s.%\(ext\)s" # Dow
 alias yta="youtube-dl -x --add-metadata -f bestaudio -o ~/Music/%\(title\)s.%\(ext\)s --audio-format mp3" # Download only audio
 alias scrot="i3_scrot"
 alias musicvisualizer="cava"
-alias listorphans="echo '>yay -Qtdq' && yay -Qtdq"
+alias removeorphans="yay -Rns $(yay -Qtdq)"
 alias locknsuspend="lockscreen && systemctl suspend"
 alias updatetime="sudo ntpdate time.apple.com"
 
