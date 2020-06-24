@@ -11,6 +11,10 @@ shopt -s autocd #Auto cd into directory
 
 alias startx='startx ~/.config/x/xinitrc'
 
+alias enw='\emacs -nw'
+alias emacs-x='\emacs'
+alias emacs='enw'
+
 alias ls='ls -a --color=auto'
 alias yt="youtube-dl --add-metadata -ic -o ~/Movies/%\(title\)s.%\(ext\)s" # Download video link
 alias yta="youtube-dl -x --add-metadata -f bestaudio -o ~/Music/%\(title\)s.%\(ext\)s --audio-format mp3" # Download only audio
@@ -18,7 +22,7 @@ alias scrot="i3_scrot"
 alias musicvisualizer="cava"
 alias listorphans="echo '>yay -Qtdq' && yay -Qtdq"
 alias locknsuspend="lockscreen && systemctl suspend"
-alias updatetime="sudo ntpdate 1.ro.pool.ntp.org"
+alias updatetime="sudo ntpdate time.apple.com"
 
 #old PS1 with color [mike@mikeArch folder]$
 #PS1='[\[\e[31m\]\u\[\e[39m\]@\h \W]\$ '
