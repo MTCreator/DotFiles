@@ -11,6 +11,10 @@ convert /tmp/base.png -grayscale rec709luma -blur 0x8 /tmp/locked.png #grayscale
 #convert /tmp/base.png +level-colors ,Teal -blur 0x8 /tmp/locked.png #tealscale
 #convert /tmp/base.png +level-colors ,Red -blur 0x8 /tmp/locked.png #redscale
 
+#add text
+motd
+convert /tmp/locked.png -gravity northwest -fill '#00000080' -pointsize 110 -font '/usr/share/fonts/TTF/DejaVuSans.ttf' -annotate +50+250 'Locked' -gravity southeast -fill '#FFFFFFAA' -pointsize 40 -font '/usr/share/fonts/TTF/DejaVuSans.ttf' -annotate +50+250 "$(cat /tmp/motd)" /tmp/locked.png
+
 #fprintled 2 red &
 
 i3lock -b -f -c 000000 -i /tmp/locked.png

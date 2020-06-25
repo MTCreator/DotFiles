@@ -1,0 +1,3 @@
+#!/bin/sh
+
+fortune -a > /tmp/motd
