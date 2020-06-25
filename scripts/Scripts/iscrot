@@ -1,0 +1,19 @@
+#!/bin/bash
+#Author: Mike Vandersanden
+
+CONFIG=$HOME/.config/scrot/iscrot.conf
+
+if ! [ -f $CONFIG ]; then
+	mkdir -p $(dirname $CONFIG)
+    echo "OUTDIR=$(xdg-user-dir PICTURES)" > $CONFIG
+fi
+
+source $CONFIG
+
+if ! [ -d $OUTDIR ]; then
+    mkdir -p $OUTDIR
+fi
+
+cd $OUTDIR
+
+scrot "${@:1}"
