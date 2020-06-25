@@ -65,13 +65,13 @@ Edits, mainly to work better with powerline.
      `(fancy-battery-charging ((,class (:background ,background-blue :height 1.0 :bold t))))
      `(fancy-battery-discharging ((,class (:background ,background-blue :height 1.0))))
      `(fancy-battery-critical ((,class (:background ,background-blue :height 1.0))))
-     
+
      ;; mode line stuff
      `(mode-line ((,class (:background ,background-blue :height 1.0 :foreground ,blue
                                        :distant-foreground ,background-blue
                                        :box ,(when zerodark-use-paddings-in-mode-line
                                                (list :line-width 6 :color background-blue))))))
-     
+
      `(mode-line-inactive ((,class (:background ,background-blue :height 1.0 :foreground ,default
                                                 :distant-foreground ,background-blue
                                                 :box ,(when zerodark-use-paddings-in-mode-line
@@ -98,7 +98,7 @@ Edits, mainly to work better with powerline.
                                                               :bold t :height 1.2))))
      `(widget-button ((,class (:background ,background :foreground ,default :bold nil
                                            :underline t :height 0.9))))
-     
+
      ;; erc stuff
      `(erc-nick-default-face ((,class :foreground ,blue :background ,background :weight bold)))
 
@@ -111,7 +111,7 @@ Edits, mainly to work better with powerline.
      `(outline-6 ((,class (:foreground ,purple :weight bold :height 1.3 :bold nil))))
      `(outline-7 ((,class (:foreground ,peach :weight bold :height 1.2 :bold nil))))
      `(outline-8 ((,class (:foreground ,green-light :weight bold :height 1.1 :bold nil))))
-     
+
      `(org-block-begin-line ((,class (:background ,background-blue :foreground ,blue
                                                   :bold t :height 1.0))))
      `(org-block-end-line ((,class (:background ,background-blue :foreground ,blue
@@ -145,6 +145,7 @@ Might disable this someday.
   (set-keyboard-coding-system 'utf-8)
   (set-selection-coding-system 'utf-8)
   (prefer-coding-system 'utf-8)
+  (set-fontset-font "fontset-default" 'unicode "JoyPixels" nil 'prepend)
 #+END_SRC
 *** Highligh current line
 =hl-line=, only used for programming when using an X window.
@@ -251,21 +252,21 @@ If you prefer the 12hr-format, change the variable to =nil= instead of =t=.
 *** Enabling the mode
 This turns on the clock globally.
 #+BEGIN_SRC emacs-lisp
-  (display-time-mode 1)
+  (display-time-mode 0)
 #+END_SRC
 
 ** Battery indicator
 A package called =fancy-battery= will be used if we are in GUI emacs, otherwise the built in battery-mode will be used.
 Fancy battery has very odd colors if used in the tty, hence us disabling it.
 #+BEGIN_SRC emacs-lisp
-  (use-package fancy-battery
-    :ensure t
-    :config
-      (setq fancy-battery-show-percentage t)
-      (setq battery-update-interval 15)
-      (if window-system
-        (fancy-battery-mode)
-        (display-battery-mode)))
+  ;(use-package fancy-battery
+  ;  :ensure t
+  ;  :config
+  ;    (setq fancy-battery-show-percentage t)
+  ;    (setq battery-update-interval 15)
+  ;    (if window-system
+  ;      (fancy-battery-mode)
+  ;      (display-battery-mode)))
 #+END_SRC
 
 ** System monitor
