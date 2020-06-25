@@ -64,7 +64,7 @@ exec_always --no-startup-id xinput set-prop 12 284 1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec xfce4-terminal -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -87,10 +87,17 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+q exec --no-startup-id chromium
 
 #Open Thunar
-bindsym $mod+r exec --no-startup-id thunar
+#bindsym $mod+r exec --no-startup-id thunar
+bindsym $mod+r exec xfce4-terminal -e ranger
+
+#Open Emacs
+bindsym $mod+e exec --no-startup-id emacs
+
+#Open VSCode
+bindsym $mod+c exec --no-startup-id code
 
 #Screenshot
-bindsym Print exec scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'
+#bindsym Print exec scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 # change focus
 bindsym $mod+h focus left
@@ -117,7 +124,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+c split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -302,7 +309,7 @@ bindsym $mod+button3 floating toggle
 hide_edge_borders smart
 
 # Toggle the window borders: cycle through none, 1px, normal.
-bindsym $mod+b border toggle
+bindsym $mod+n border toggle
 
 #remove titlebar
 new_window pixel
