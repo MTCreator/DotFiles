@@ -40,6 +40,9 @@ exec_always --no-startup-id xsetroot -solid "1a1a1a"
 #exec_always --no-startup-id feh --bg-max ~/Pictures/PepeCoatOfArms.png
 exec_always --no-startup-id customwall
 
+# Set time
+exec ntpdate time.apple.com
+
 # Composite manager:
 #exec --no-startup-id compton --config .config/compton.conf
 
