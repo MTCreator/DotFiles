@@ -2,9 +2,15 @@
 
 rm -f /tmp/locked.png
 
+cp ~/wall.png /tmp/base.png
+
+if ! [ -f /tmp/base.png ]; then
+	convert -size 1920x1080 xc:black /tmp/base.png
+fi
+
 # If `imagemagick` is not installed, use a blank screen.
 [ -f /usr/bin/convert ] &&
-rm -f /tmp/base.png && scrot -m -z /tmp/base.png &&
+#rm -f /tmp/base.png && scrot -m -z /tmp/base.png &&
 pgrep -x dunst && notify-send -i security-high-symbolic.symbolic "Locking computer..." &&
 convert /tmp/base.png -grayscale rec709luma -blur 0x8 /tmp/locked.png #grayscale
 #convert /tmp/base.png -level 25%\! -blur 0x8 /tmp/locked.png #less color
@@ -13,7 +19,7 @@ convert /tmp/base.png -grayscale rec709luma -blur 0x8 /tmp/locked.png #grayscale
 
 #add text
 motd
-convert /tmp/locked.png -gravity northwest -fill '#00000080' -pointsize 110 -font '/usr/share/fonts/TTF/DejaVuSans.ttf' -annotate +50+250 'Locked' -gravity southeast -fill '#FFFFFFAA' -pointsize 40 -font '/usr/share/fonts/TTF/DejaVuSans.ttf' -annotate +50+250 "$(cat /tmp/motd)" /tmp/locked.png
+convert /tmp/locked.png -gravity northwest -fill '#11111180' -pointsize 110 -font '/usr/share/fonts/TTF/DejaVuSans.ttf' -annotate +50+250 'Locked' -gravity southeast -fill '#FFFFFFAA' -pointsize 20 -font '/usr/share/fonts/TTF/DejaVuSans.ttf' -annotate +50+250 "$(cat /tmp/motd)" /tmp/locked.png
 
 #fprintled 2 red &
 
