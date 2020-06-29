@@ -1,0 +1,90 @@
+#!/bin/sh
+#Author: Mike Vandersanden
+
+#colors
+bold="$(tput bold)"
+reset="$(tput sgr0)"
+gray="$(tput setaf 0)"
+red="$(tput setaf 1)"
+green="$(tput setaf 2)"
+yellow="$(tput setaf 3)"
+blue="$(tput setaf 4)"
+violet="$(tput setaf 5)"
+cyan="$(tput setaf 6)"
+white="$(tput setaf 7)"
+
+#colorlist
+colors=(
+""
+"${reset}${gray}0110${reset}"
+"${reset}${gray}0010${reset}"
+"${reset}${red}0110${reset}"
+"${reset}${red}0101${reset}"
+"${reset}${yellow}0110${reset}"
+"${reset}${yellow}1100${reset}"
+"${reset}${green}0110${reset}"
+"${reset}${green}1100${reset}"
+"${reset}${blue}0110${reset}"
+"${reset}${blue}0001${reset}"
+"${reset}${cyan}0111${reset}"
+"${reset}${cyan}0100${reset}"
+"${reset}${violet}0110${reset}"
+"${reset}${violet}1111${reset}"
+"${reset}${white}0111${reset}"
+"${reset}${white}0010${reset}"
+)
+
+#logo
+logo=(
+"${blue}              @@@@@@@@@@@@@             ${reset}"		
+"${blue}            @               @           ${reset}"		
+"${blue}           @                 @          ${reset}"		
+"${blue}          @ ${cyan}@@@@@@@@@@@@@@@@@ ${blue}@         ${reset}"		
+"${blue}         @ ${cyan}@@@@@@@@@@@@@@@@@@@ ${blue}@        ${reset}"		
+"${blue}        @ ${cyan}@@@@              @@@ ${blue}@       ${reset}"		
+"${blue}       @ ${cyan}@@@@               (@@@ ${blue}@      ${reset}"		
+"${blue}      @ ${cyan}@@@@@   ${white}__      __  ${cyan}(@@@@ ${blue}@     ${reset}"		
+"${blue}     @  ${cyan}@@@@@  ${white}@@@     @@@  ${cyan}(@@@@@ ${blue}@    ${reset}"		
+"${blue}     @    ${cyan}@@@      ${white}<        ${cyan}(@@@@@ ${blue}@    ${reset}"		
+"${blue}     @      ${cyan}@@@@@       (@@@@      ${blue}@    ${reset}"		
+"${blue}     @      ${cyan}@@@@@ ${white}|||| ${cyan}(@@@@@      ${blue}@    ${reset}"		
+"${blue}       @      ${cyan}@@@ ${white}⁻⁻⁻⁻ ${cyan}(@@@       ${blue}@     ${reset}"		
+"${blue}         @    ${cyan}@@@@@@@@@@@@@     ${blue}@       ${reset}"		
+"${blue}           @    ${cyan}@@@@@@@@@     ${blue}@         ${reset}"		
+"${blue}             @              @           ${reset}"		
+"${blue}               @          @             ${reset}"		
+"${blue}                 @@@@@@@@               ${reset}"		
+"${blue}                                        ${reset}"		
+)
+
+#"              @@@@@@@@@@@@@             "
+#"            @               @           "
+#"           @                 @          "
+#"          @ @@@@@@@@@@@@@@@@@ @         "
+#"         @ @@@@@@@@@@@@@@@@@@@ @        "
+#"        @ @@@@              @@@ @       "
+#"       @ @@@@               (@@@ @      "
+#"      @ @@@@@   __      __  (@@@@ @     "
+#"     @  @@@@@  @@@     @@@  (@@@@@ @    "
+#"     @    @@@      <        (@@@@@ @    "
+#"     @      @@@@@       (@@@@      @    "
+#"     @      @@@@@ |||| (@@@@@      @    "
+#"       @      @@@ ⁻⁻⁻⁻ (@@@       @     "
+#"         @    @@@@@@@@@@@@@     @       "
+#"           @    @@@@@@@@@     @         "
+#"             @              @           "
+#"               @          @             "
+#"                 @@@@@@@@               "
+#"                                        "
+
+
+#data
+data=(
+""	#empty line to start
+)
+
+#retrieve data
+
+
+#print everything
+for i in ${!logo[@]}; do printf "%s\t%s\t%s\n" "${colors[$i]}" "${logo[$i]}" "${data[$i]}"; done
