@@ -624,6 +624,13 @@ change =zzz-up-to-char= into =zzz-to-char=.
 (setq-default tab-width 4)
 #+END_SRC
 
+** Resize window
+#+BEGIN_SRC emacs-lisp
+    (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+    (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+    (global-set-key (kbd "S-C-<down>") 'shrink-window)
+    (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+#+END_SRC
 * Kill ring
 ** Maximum entries on the ring
 The default is 60, I personally need more sometimes.
