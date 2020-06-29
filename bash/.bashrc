@@ -35,4 +35,9 @@ if [[ $LANG = '' ]]; then
 fi
 
 #windows 95 prompt text
-printf "\nMemesoft(R) LinuxOS 77\n\t(C)Copyright Memesoft Corp 1999-2019.\n\n"
+#printf "\nMemesoft(R) LinuxOS 77\n\t(C)Copyright Memesoft Corp 1999-2019.\n\n"
+printf "\n"
+shuf -n 1 ~/.config/bash_headlines
+printf "\n"
+task simple
+printf "\n"
