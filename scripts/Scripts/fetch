@@ -23,7 +23,7 @@ white="$(tput setaf 15)"
 
 #colorlist
 colors=(
-""
+"    "
 "${reset}${black}0110${reset}"
 "${reset}${gray}0010${reset}"
 "${reset}${red}0110${reset}"
@@ -40,6 +40,7 @@ colors=(
 "${reset}${pink}1111${reset}"
 "${reset}${lightgray}0111${reset}"
 "${reset}${white}0010${reset}"
+"    "
 )
 
 #logo
@@ -91,7 +92,22 @@ data=(
 )
 
 #retrieve data
+data+=("${teal}$(whoami)${reset}@${cyan}$(hostname)${reset}")
+data+=("${cyan}kernel:${reset} $(uname) $(uname -r)")
+data+=("${cyan}shell:${reset} $SHELL")
 
+if command -v task > /dev/null
+then
+data+=("") 
+data+=("${green}pending tasks:${reset} $(task status:pending count)")
+data+=("${green}projects:${reset} $(task projects | tail -n1 | awk '{print $1;}')")
+fi
+
+if [ -f ~/.config/bash_headlines ]
+then
+data+=("") 
+data+=("${red}${bold}$(shuf -n 1 ~/.config/bash_headlines)${reset}")
+fi
 
 #print everything
-for i in ${!logo[@]}; do printf "%s\t%s\t%s\n" "${colors[$i]}" "${logo[$i]}" "${data[$i]}"; done
+for i in ${!logo[@]}; do printf "%s%s\t%s\n" "${colors[$i]}" "${logo[$i]}" "${data[$i]}"; done
