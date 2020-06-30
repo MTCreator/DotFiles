@@ -85,28 +85,6 @@ logo=(
 #"             \@\<><>-<><>/@/            "
 #"               \@@@@@@@@@/              "
 
-
-#"${blue}              @@@@@@@@@@@@@             ${reset}"		
-#"${blue}            @               @           ${reset}"		
-#"${blue}           @                 @          ${reset}"		
-#"${blue}          @ ${teal}@@@@@@@@@@@@@@@@@ ${blue}@         ${reset}"		
-#"${blue}         @ ${teal}@@@@@@@@@@@@@@@@@@@ ${blue}@        ${reset}"		
-#"${blue}        @ ${teal}@@@@              @@@ ${blue}@       ${reset}"		
-#"${blue}       @ ${teal}@@@@               (@@@ ${blue}@      ${reset}"		
-#"${blue}      @ ${teal}@@@@@   ${white}__      __  ${teal}(@@@@ ${blue}@     ${reset}"	#	
-#"${blue}     @  ${teal}@@@@@  ${white}${bold}@@@     @@@${reset}  ${teal}(@@@@@ ${blue}#@    ${reset}"		
-#"${blue}     @    ${teal}@@@      ${white}<        ${teal}(@@@@@ ${blue}@    ${reset}"	#	
-#"${blue}     @      ${teal}@@@@@       (@@@@      ${blue}@    ${reset}"		
-#"${blue}     @      ${teal}@@@@@ ${white}${bold}||||${reset} ${teal}(@@@@@      ${blue}#@    ${reset}"		
-#"${blue}       @      ${teal}@@@ ${white}${bold}⁻⁻⁻⁻${reset} ${teal}(@@@       ${blue}#@     ${reset}"		
-#"${blue}         @    ${teal}@@@@@@@@@@@@@     ${blue}@       ${reset}"		
-#"${blue}           @    ${teal}@@@@@@@@@     ${blue}@         ${reset}"		
-#"${blue}             @              @           ${reset}"		
-#"${blue}               @          @             ${reset}"		
-#"${blue}                 @@@@@@@@               ${reset}"		
-#"${blue}                                        ${reset}"
-
-
 #data
 data=(
 ""	#empty line to start
