@@ -1,22 +1,21 @@
-#!/bin/bash
+#!/bin/sh
 
 BATCHR=''
-if ! [ -z $(acpi -b | grep -E -o 'Charging') ]
+if acpi -b | grep -q 'Charging'
 then
-    BATCHRG="⚡"
+    BATCHR="⚡"
 fi
 
 BAT=$(sudo tlp-stat | grep -w "Charge total" | grep -o "[0-9]\{1,3\}.[0-9]\{1,2\}")
 
 # Full and short texts
-echo "$BATCHRG$BAT%"
+echo "$BATCHR$BAT%"
 echo "$BAT%"
 
 BATINT=$(printf "%.0f\n" "$BAT")
 
 # Set urgent flag below 5% or use orange below 20%
-[ $BATINT -le 15 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'POWER LEVELS ARE CRITICAL!' -u critical -i battery-caution && echo "Power levels 
-are critical" | espeak -q && fprintled 1 red && exit 33
-[ $BATINT -le 25 ] && notify-send 'Low-ish Battery' 'Get your charger ready' -u normal -i battery-low  && echo "#f4e242"
+[ "$BATINT" -le 100 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'POWER LEVELS ARE CRITICAL!' -u critical -i battery-caution && exit 33
+[ "$BATINT" -le 30 ] && notify-send 'Low-ish Battery' 'Get your charger ready' -u normal -i battery-low  && echo "#f4e242"
 
 exit 0
