@@ -15,7 +15,7 @@ echo "$BAT%"
 BATINT=$(printf "%.0f\n" "$BAT")
 
 # Set urgent flag below 5% or use orange below 20%
-[ "$BATINT" -le 100 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'POWER LEVELS ARE CRITICAL!' -u critical -i battery-caution && exit 33
+[ "$BATINT" -le 20 ] && [ -z "$BATCHR" ] && notify-send 'Low Battery!' 'POWER LEVELS ARE CRITICAL!' -u critical -i battery-caution && exit 33
 [ "$BATINT" -le 30 ] && notify-send 'Low-ish Battery' 'Get your charger ready' -u normal -i battery-low  && echo "#f4e242"
 
 exit 0
