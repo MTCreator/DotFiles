@@ -10,5 +10,5 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export GOPATH="$XDG_PROGRAMMING_DIR"/go
 
 #Add to PATH
-export PATH="$PATH:$HOME/Scripts"
+export PATH="$PATH:$HOME/scripts"
 export PATH="$PATH:$(go env GOPATH)/bin"
