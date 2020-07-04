@@ -2,7 +2,7 @@
 
 rm -f /tmp/locked.png
 
-cp ~/wall.png /tmp/base.png
+cp ~/.cache/wall.png /tmp/base.png
 
 if ! [ -f /tmp/base.png ]; then
 	convert -size 1920x1080 xc:black /tmp/base.png
