@@ -6,8 +6,10 @@
 BACKGROUND_LOC=$HOME/.config/customwall/background
 FOREGROUND_LOC=$HOME/.config/customwall/foreground
 
-cp $BACKGROUND_LOC/$(ls $BACKGROUND_LOC | shuf -n1) bg.png
-cp $FOREGROUND_LOC/$(ls $FOREGROUND_LOC | shuf -n1) fg.png
+cd ~/.cache || exit 1
+
+cp "$(find "$BACKGROUND_LOC" | shuf -n1)" bg.png
+cp "$(find "$FOREGROUND_LOC" | shuf -n1)" fg.png
 
 convert fg.png -alpha on -background none -gravity center -gravity center -extent 1920x1080 fg.png
 convert bg.png -channel RGB -negate invert.png
@@ -18,4 +20,4 @@ rm bg.png
 rm fg.png
 rm invert.png
 rm out.png
-feh --bg-center wall.png
+xwallpaper --center wall.png
