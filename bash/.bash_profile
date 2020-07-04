@@ -4,7 +4,7 @@
 
 # Profile file. Runs on login.
 
-export PATH="$PATH:$HOME/Scripts"
+export PATH="$PATH:$HOME/scripts"
 #export EDITOR=""
 export TERMINAL="xfce4-terminal"
 export BROWSER="chromium"
