@@ -31,13 +31,8 @@ font pango:monospace 10
 # gaps inner 5
 # gaps outer 5
 
-exec_always --no-startup-id setupkeyboard
-
 # Start external scripts
 # Setting the background:
-exec_always --no-startup-id xsetroot -solid "1a1a1a"
-#exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
-#exec_always --no-startup-id feh --bg-max ~/Pictures/PepeCoatOfArms.png
 exec_always --no-startup-id customwall
 
 # Set time
