@@ -1,7 +1,0 @@
-#!/bin/bash
-#Author: Mike Vandersanden
-
-cd $HOME/.scripts
-cave_background 128 72 51 1
-feh --bg-tile cave.png
-#feh --bg-scale cave.png
