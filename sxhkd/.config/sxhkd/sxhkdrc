@@ -1,0 +1,22 @@
+# Hotkeys
+
+super + Return
+	$TERMINAL -e tmux
+
+super + d
+	dmenu_run
+
+super + q
+	$BROWSER
+
+super + r
+	$TERMINAL -e ranger
+
+super + e
+	$TERMINAL -e "tmux -c 'emacs -nw'"
+
+super + c
+	code
+
+super + t
+	$TERMINAL -e tasksh

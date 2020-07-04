@@ -53,57 +53,15 @@ exec_always --no-startup-id dunst
 exec --no-startup-id discord
 # exec --no-startup-id slack
 
-# Unclutter makes the mouse invisible after a brief period
-exec_always --no-startup-id unclutter
-
 # Network manager applet
 exec --no-startup-id nm-applet
-
-# tap to click
-exec_always --no-startup-id xinput set-prop 12 284 1
-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec xfce4-terminal -e tmux
-
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym $mod+F4 kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-
-# For use with xfce4 whisker popup menu in Mint XFCE:
-bindsym $mod+d exec dmenu_run
-# bindsym mod4+w exec --no-startup-id xfce4-popup-whiskermenu
-
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-#Open Chromium
-bindsym $mod+q exec --no-startup-id chromium
-
-#Open Thunar
-#bindsym $mod+r exec --no-startup-id thunar
-bindsym $mod+r exec xfce4-terminal -e ranger
-
-#Open Emacs
-bindsym $mod+e exec xfce4-terminal -e "tmux -c 'emacs -nw'"
-
-#Open VSCode
-bindsym $mod+c exec --no-startup-id code
-
-#Open Task
-bindsym $mod+t exec xfce4-terminal -e "tasksh"
-
-#Screenshot
-#bindsym Print exec scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 # change focus
 bindsym $mod+h focus left

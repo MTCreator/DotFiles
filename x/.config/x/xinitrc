@@ -1,6 +1,9 @@
 # source custom keybinds
 [[ -f ~/.config/x/Xmodmap ]] && xmodmap ~/.config/x/Xmodmap
 
+# tap to click
+xinput set-prop 12 284 1
+
 # source xresources
 [[ -f ~/.config/x/Xresources ]] && xrdb ~/.config/x/Xresources
 
@@ -18,6 +21,9 @@ setxkbmap be
 
 # Start hotkeys
 sxhkd &
+
+# unclutter cursor
+unclutter &
 
 # Default
 session=${1:-i3}
