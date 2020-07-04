@@ -4,9 +4,6 @@
 # tap to click
 xinput set-prop 12 284 1
 
-# source xresources
-[[ -f ~/.config/x/Xresources ]] && xrdb ~/.config/x/Xresources
-
 # set key autorepeat rate
 xset r rate 200 25
 
