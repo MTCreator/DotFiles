@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #Author: Mike Vandersanden
 
 #colors
@@ -100,7 +100,7 @@ if command -v task > /dev/null
 then
 data+=("") 
 data+=("${green}pending tasks:${reset} $(task status:pending count)")
-data+=("${green}projects:${reset} $(task projects | tail -n1 | awk '{print $1;}')")
+data+=("${green}projects:${reset} $(task projects | tail -n1 | (read -r projcount; echo "${projcount%% *}"))")
 fi
 
 if [ -f ~/.config/bash_headlines ]
@@ -110,4 +110,4 @@ data+=("${red}${bold}$(shuf -n 1 ~/.config/bash_headlines)${reset}")
 fi
 
 #print everything
-for i in ${!logo[@]}; do printf "%s%s\t%s\n" "${colors[$i]}" "${logo[$i]}" "${data[$i]}"; done
+for i in "${!logo[@]}"; do printf "%s%s\t%s\n" "${colors[$i]}" "${logo[$i]}" "${data[$i]}"; done
