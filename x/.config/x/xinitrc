@@ -1,15 +1,23 @@
 # source custom keybinds
 [[ -f ~/.config/x/Xmodmap ]] && xmodmap ~/.config/x/Xmodmap
-#
+
+# source xresources
 [[ -f ~/.config/x/Xresources ]] && xrdb ~/.config/x/Xresources
+
 # set key autorepeat rate
 xset r rate 200 25
+
 # set belgian keyboard layout
 setxkbmap be
+
 # Load x settings
 [[ -f ~/.config/x/Xresources ]] && xrdb ~/.config/x/Xresources
+
 # start polkit gui auth
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Start hotkeys
+sxhkd &
 
 # Default
 session=${1:-i3}
