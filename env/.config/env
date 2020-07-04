@@ -1,0 +1,14 @@
+#Environment settings
+
+#Default applications
+export TERMINAL="xfce4-terminal"
+export BROWSER="chromium"
+export EDITOR="emacs"
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
+#Change paths (for configs)
+export GOPATH="$XDG_PROGRAMMING_DIR"/go
+
+#Add to PATH
+export PATH="$PATH:$HOME/Scripts"
+export PATH="$PATH:$(go env GOPATH)/bin"
