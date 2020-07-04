@@ -1,6 +1,3 @@
-# source custom keybinds
-[[ -f ~/.config/x/Xmodmap ]] && xmodmap ~/.config/x/Xmodmap
-
 # tap to click
 xinput set-prop 12 284 1
 
@@ -11,13 +8,16 @@ xset r rate 200 25
 setxkbmap be
 
 # Load x settings
-[[ -f ~/.config/x/Xresources ]] && xrdb ~/.config/x/Xresources
+xrdb ~/.config/x/Xresources
 
 # start polkit gui auth
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Start hotkeys
 sxhkd &
+
+# source custom keybinds
+xmodmap ~/.config/x/Xmodmap
 
 # unclutter cursor
 unclutter &
