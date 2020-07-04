@@ -51,3 +51,6 @@ report.simple.columns=id,project,description.count,priority
 report.simple.labels=ID,Proj,Desc,Prior
 report.simple.filter=status:pending limit:5
 report.simple.sort=urgency-
+
+context.work=+work
+context.school=+school or +homework or +summary or +assignment
