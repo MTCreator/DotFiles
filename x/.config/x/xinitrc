@@ -1,5 +1,7 @@
 # source custom keybinds
 [[ -f ~/.config/x/Xmodmap ]] && xmodmap ~/.config/x/Xmodmap
+#
+[[ -f ~/.config/x/Xresources ]] && xrdb ~/.config/x/Xresources
 # set key autorepeat rate
 xset r rate 200 25
 # set belgian keyboard layout
