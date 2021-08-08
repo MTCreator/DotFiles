@@ -1,0 +1,15 @@
+#!/bin/bash
+
+LAYOUT_DIR=$(awk -v u="$USER" -v FS=':' '$1==u {print $6}' /etc/passwd)/scripts/screenlayout
+LAYOUTS=($LAYOUT_DIR/*)
+
+for ((i=0; i<${#LAYOUTS[@]}; i++)); do
+	LAYOUTS[$i]=$(basename "${LAYOUTS[$i]}")
+done
+
+CHOSEN=$(printf "%s\n" "${LAYOUTS[@]}" | dmenu)
+
+$LAYOUT_DIR/$CHOSEN
+
+maptouchscreen
+i3-msg restart
