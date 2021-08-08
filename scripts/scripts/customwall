@@ -8,8 +8,29 @@ FOREGROUND_LOC=$HOME/.config/customwall/foreground
 
 cd ~/.cache || exit 1
 
-cp "$(find "$BACKGROUND_LOC" | shuf -n1)" bg.png
-cp "$(find "$FOREGROUND_LOC" | shuf -n1)" fg.png
+while getopts ":b:f:" opt; do
+	case "${opt}" in
+		b)
+			#set background
+			cp "${BACKGROUND_LOC}/${OPTARG}" bg.png
+			;;
+		f)
+			#set foreground
+			cp "${FOREGROUND_LOC}/${OPTARG}" fg.png
+			;;
+		*)
+			#do nothing
+			;;
+	esac
+done
+
+if [ ! -f bg.png ]; then
+	cp "$(find "$BACKGROUND_LOC" | shuf -n1)" bg.png
+fi
+
+if [ ! -f fg.png ]; then
+	cp "$(find "$FOREGROUND_LOC" | shuf -n1)" fg.png
+fi
 
 convert fg.png -alpha on -background none -gravity center -gravity center -extent 1920x1080 fg.png
 convert bg.png -channel RGB -negate invert.png
@@ -20,4 +41,4 @@ rm bg.png
 rm fg.png
 rm invert.png
 rm out.png
-xwallpaper --center wall.png
+xwallpaper --trim 540x720+690+180 --focus wall.png

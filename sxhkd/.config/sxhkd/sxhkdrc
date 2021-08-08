@@ -3,6 +3,9 @@
 super + Return
 	$TERMINAL -e tmux
 
+super + shift + Return
+	$TERMINAL
+
 super + d
 	dmenu_run
 
@@ -10,7 +13,7 @@ super + q
 	$BROWSER
 
 super + r
-	$TERMINAL -e ranger
+	thunar
 
 super + e
 	$TERMINAL -e "tmux -c 'emacs -nw'"
@@ -20,3 +23,4 @@ super + c
 
 super + t
 	$TERMINAL -e tasksh
+

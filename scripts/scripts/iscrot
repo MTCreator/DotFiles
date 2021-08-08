@@ -16,4 +16,27 @@ fi
 
 cd $OUTDIR
 
-scrot "${@:1}"
+toclip=0
+
+for var in "${@:1}"
+do
+
+case $var in
+
+	-x)
+	toclip=1
+	;;
+
+	*)
+	params+=$var
+	;;
+esac
+
+done
+
+if [ $toclip == 1 ]
+then
+	scrot "$params" -e 'xclip -selection clipboard -target image/png -i $f'
+else
+	scrot "$params"
+fi

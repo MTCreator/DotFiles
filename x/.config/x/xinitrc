@@ -5,7 +5,11 @@ xinput set-prop 12 284 1
 xset r rate 200 25
 
 # set belgian keyboard layout
-setxkbmap be
+thinkkeyboard=$(xinput | grep "AT Translated Set 2 keyboard" | grep -oP "id=\K\d+")
+setxkbmap be -device ${thinkkeyboard}
+
+logitechkeyboard=$(xinput | grep "Logitech G413" | grep -oP "id=\K\d+" | head -1)
+setxkbmap us -option compose:ralt  -device ${logitechkeyboard}
 
 # Load x settings
 xrdb ~/.config/x/Xresources

@@ -32,8 +32,12 @@ font pango:monospace 10
 # gaps outer 5
 
 # Start external scripts
+#exec_always --no-startup-id dockd --daemon
+
 # Setting the background:
-exec_always --no-startup-id customwall
+exec_always --no-startup-id customwall -b hubble.jpg -f shepherd.png
+
+exec_always --no-startup-id xmodmap .config/x/Xmodmap
 
 # Set time
 exec ntpdate time.apple.com
@@ -55,7 +59,7 @@ exec --no-startup-id nm-applet
 floating_modifier $mod
 
 # kill focused window
-bindsym $mod+Shift+q kill
+#bindsym $mod+Shift+q kill
 bindsym $mod+F4 kill
 
 # change focus
@@ -98,6 +102,9 @@ bindsym Ctrl+$mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
+# toggle sticky
+bindsym $mod+Shift+c sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -163,7 +170,7 @@ for_window [class="steam_app_32370"] floating enable
 
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -295,3 +302,5 @@ bindsym XF86MonBrightnessDown	exec --no-startup-id sudo light -U 10 && notify-se
 bindsym XF86MonBrightnessUp	exec --no-startup-id sudo light -A 10 && notify-send -t 500 -i video-display 'Screen Brightness' "$(light)%"
 #bindsym XF86WebCam
 bindsym XF86Tools               exec code ~/.config/i3/config
+
+bindsym XF86Search		exec iscrot -x -s
