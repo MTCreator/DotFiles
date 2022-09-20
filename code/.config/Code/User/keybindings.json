@@ -9,7 +9,7 @@
 		"command": "workbench.action.terminal.focus"
 	},
 	{
-		"key": "f5",
+		"key": "ctrl+f5",
 		"command": "workbench.action.debug.run",
 		"when": "!inDebugMode"
 	},
@@ -24,7 +24,7 @@
 		"when": "inDebugMode"
 	},
 	{
-		"key": "ctrl+shift+f5",
+		"key": "f5",
 		"command": "workbench.action.debug.start",
 		"when": "!inDebugMode"
 	},

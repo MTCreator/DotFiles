@@ -48,4 +48,4 @@ printf "\n"
 shuf -n 1 ~/.config/bash_headlines
 printf "\n"
 task simple
-printf "\n"
+# printf "\n"

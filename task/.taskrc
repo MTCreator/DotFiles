@@ -52,5 +52,8 @@ report.simple.labels=ID,Proj,Desc,Prior
 report.simple.filter=status:pending limit:5
 report.simple.sort=urgency-
 
-context.work=+work
-context.school=+school or +homework or +summary or +assignment
+context.school.read=+school or +homework or +summary or +assignment
+context.school.write=+school
+context.work.read=+work
+context.work.write=+work
+news.version=2.6.0

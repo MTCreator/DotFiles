@@ -35,7 +35,7 @@ font pango:monospace 10
 #exec_always --no-startup-id dockd --daemon
 
 # Setting the background:
-exec_always --no-startup-id customwall -b hubble.jpg -f shepherd.png
+exec_always --no-startup-id customwall -b blank.png # -f advent.png
 
 exec_always --no-startup-id xmodmap .config/x/Xmodmap
 

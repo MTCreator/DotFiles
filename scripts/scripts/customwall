@@ -25,20 +25,23 @@ while getopts ":b:f:" opt; do
 done
 
 if [ ! -f bg.png ]; then
-	cp "$(find "$BACKGROUND_LOC" | shuf -n1)" bg.png
+	cp "$(find "$BACKGROUND_LOC"/* | shuf -n1)" bg.png
 fi
 
 if [ ! -f fg.png ]; then
-	cp "$(find "$FOREGROUND_LOC" | shuf -n1)" fg.png
+	cp "$(find "$FOREGROUND_LOC"/* | shuf -n1)" fg.png
 fi
 
 convert fg.png -alpha on -background none -gravity center -gravity center -extent 1920x1080 fg.png
+convert fg.png -alpha extract mask.png
 convert bg.png -channel RGB -negate invert.png
 convert fg.png invert.png -compose Multiply -composite out.png
+convert out.png mask.png -alpha Off -compose CopyOpacity -composite out.png
 composite out.png bg.png wall.png
 
 rm bg.png
 rm fg.png
 rm invert.png
 rm out.png
+rm mask.png
 xwallpaper --trim 540x720+690+180 --focus wall.png

@@ -9,7 +9,8 @@ thinkkeyboard=$(xinput | grep "AT Translated Set 2 keyboard" | grep -oP "id=\K\d
 setxkbmap be -device ${thinkkeyboard}
 
 logitechkeyboard=$(xinput | grep "Logitech G413" | grep -oP "id=\K\d+" | head -1)
-setxkbmap us -option compose:ralt  -device ${logitechkeyboard}
+setxkbmap -layout us -variant intl -device ${logitechkeyboard}
+# -option compose:ralt
 
 # Load x settings
 xrdb ~/.config/x/Xresources

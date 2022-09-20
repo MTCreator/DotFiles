@@ -13,6 +13,6 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 #export TRUEBROWSER=""
 #export READER=""
 
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$(go env GOPATH)/bin:$HOME/.local/bin"
 
 [[ -f ~/.bashrc ]] && source ~/.bashrc
