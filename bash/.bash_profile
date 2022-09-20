@@ -4,9 +4,10 @@
 
 # Profile file. Runs on login.
 
+export LANG=en_US.UTF-8
+
 export PATH="$PATH:$HOME/scripts"
-#export EDITOR=""
-export TERMINAL="xfce4-terminal"
+export TERMINAL="kitty"
 export BROWSER="chromium"
 export EDITOR="nano"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
