@@ -11,5 +11,4 @@ CHOSEN=$(printf "%s\n" "${LAYOUTS[@]}" | dmenu)
 
 $LAYOUT_DIR/$CHOSEN
 
-maptouchscreen
 i3-msg restart

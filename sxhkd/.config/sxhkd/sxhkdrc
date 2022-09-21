@@ -1,9 +1,6 @@
 # Hotkeys
 
 super + Return
-	$TERMINAL -e tmux
-
-super + shift + Return
 	$TERMINAL
 
 super + d
@@ -14,9 +11,6 @@ super + q
 
 super + r
 	thunar
-
-super + e
-	$TERMINAL -e "tmux -c 'emacs -nw'"
 
 super + c
 	code

@@ -1,7 +1,7 @@
 {
 	"editor.fontSize": 12,
 	"editor.wordWrap": "on",
-	"editor.fontFamily": "monospace",
+	"editor.fontFamily": "'Comic Mono', monospace",
 	"editor.minimap.enabled": false,
 	"files.associations": {
 		"*.rmd": "markdown"

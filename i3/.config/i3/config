@@ -35,12 +35,7 @@ font pango:monospace 10
 #exec_always --no-startup-id dockd --daemon
 
 # Setting the background:
-exec_always --no-startup-id customwall -b hubble.jpg -f shepherd.png
-
-exec_always --no-startup-id xmodmap .config/x/Xmodmap
-
-# Set time
-exec ntpdate time.apple.com
+exec_always --no-startup-id customwall -b blank.png # -f advent.png
 
 # Composite manager:
 #exec --no-startup-id compton --config .config/compton.conf
@@ -49,7 +44,6 @@ exec ntpdate time.apple.com
 exec_always --no-startup-id dunst
 
 # Start Discord/Slack
-exec --no-startup-id discord
 # exec --no-startup-id slack
 
 # Network manager applet
@@ -160,14 +154,6 @@ bindsym Ctrl+$mod+Mod1+m exec i3-dtags-moveto
 
 # Move workspace to output
 bindsym Ctrl+$mod+o exec movetooutput
-
-#for_window [title="GIMP Startup"] move workspace $w5
-#for_window [class="Gimp"] move workspace $w5
-#for_window [title="Discord"] move workspace $w1
-#for_window [title="Tasque"] move workspace $w1
-for_window [class="minecraft-launcher"] floating enable
-for_window [class="steam_app_32370"] floating enable
-
 
 # reload the configuration file
 #bindsym $mod+Shift+c reload

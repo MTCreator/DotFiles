@@ -1,40 +1,10 @@
-# tap to click
-xinput set-prop 12 284 1
-
-# set key autorepeat rate
+# keyboard autorepeat
 xset r rate 200 25
 
-# set belgian keyboard layout
-thinkkeyboard=$(xinput | grep "AT Translated Set 2 keyboard" | grep -oP "id=\K\d+")
-setxkbmap be -device ${thinkkeyboard}
-
-logitechkeyboard=$(xinput | grep "Logitech G413" | grep -oP "id=\K\d+" | head -1)
-setxkbmap us -option compose:ralt  -device ${logitechkeyboard}
-
-# Load x settings
 xrdb ~/.config/x/Xresources
 
-# start polkit gui auth
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-# Start hotkeys
 sxhkd &
 
-# source custom keybinds
-xmodmap ~/.config/x/Xmodmap
-
-# unclutter cursor
 unclutter &
 
-# Default
-session=${1:-i3}
-
-case $session in
-    i3|i3wm           ) exec i3;;
-    sway|swaywm       ) export XKB_DEFAULT_LAYOUT=be; exec sway;;
-    awesome           ) exec awesome;;
-    emacs             ) exec emacs;;
-    # No known session, try to run it as command
-    *                 ) exec $1;;
-esac
-
+exec lightdm
