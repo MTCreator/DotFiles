@@ -16,7 +16,7 @@ alias yt="youtube-dl --add-metadata -ic -o ~/Movies/%\(title\)s.%\(ext\)s" # Dow
 alias yta="youtube-dl -x --add-metadata -f bestaudio -o ~/Music/%\(title\)s.%\(ext\)s --audio-format mp3" # Download only audio
 
 #PS1
-PS1="[\u@\h \w]\\$\[$(tput sgr0)\]"
+PS1="[\u@\h \w]\\$\[$(tput sgr0)\] "
 
 printf "\n"
 shuf -n 1 ~/.config/bash_headlines

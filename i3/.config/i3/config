@@ -32,7 +32,8 @@ font pango:monospace 10
 # gaps outer 5
 
 # Start external scripts
-#exec_always --no-startup-id dockd --daemon
+exec --no-startup-id xset r rate 200 25
+exec --no-startup-id xrdb ~/.config/x/Xresources
 
 # Setting the background:
 exec_always --no-startup-id customwall -b blank.png # -f advent.png
@@ -42,6 +43,9 @@ exec_always --no-startup-id customwall -b blank.png # -f advent.png
 
 # Starts dunst for notifications:
 exec_always --no-startup-id dunst
+
+exec --no-startup-id unclutter
+exec --no-startup-id sxhkd
 
 # Start Discord/Slack
 # exec --no-startup-id slack
