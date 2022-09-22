@@ -1,2 +1,15 @@
 #!/bin/sh
-[[ -f ~/.bash_profile ]] && source ~/.bash_profile
+
+export LANG=en_US.UTF-8
+
+export TERMINAL="kitty"
+export BROWSER="chromium"
+export EDITOR="nano"
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+#export TRUEBROWSER=""
+#export READER=""
+
+export PATH="$PATH:$HOME/scripts:$(go env GOPATH)/bin:$HOME/.local/bin"
+
+xset r rate 200 25
+xrdb ~/.config/x/Xresources

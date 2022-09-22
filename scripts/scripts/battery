@@ -6,7 +6,7 @@ then
     BATCHR="⚡"
 fi
 
-BAT=$(acpi -b | grep -o "[0-9]\{1,3\}.[0-9]\{1,2\}")
+BAT=$(sudo tlp-stat | grep Charge | grep -o "[0-9]\{1,3\}.[0-9]\{1,2\}")
 
 # Full and short texts
 echo "$BATCHR$BAT%"

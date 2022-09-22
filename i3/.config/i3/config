@@ -32,8 +32,6 @@ font pango:monospace 10
 # gaps outer 5
 
 # Start external scripts
-exec --no-startup-id xset r rate 200 25
-exec --no-startup-id xrdb ~/.config/x/Xresources
 
 # Setting the background:
 exec_always --no-startup-id customwall -b blank.png # -f advent.png
@@ -236,12 +234,12 @@ client.urgent           $color1            $color1            $fg               
 bar {
 	font pango:monospace 8
 	colors {
-			background $bg
-			statusline $fg
+			background $fg
+			statusline $bg
 			separator $color9
-			focused_workspace  $fg $fg $bg
-        		active_workspace   $fg $fg $bg
-      			inactive_workspace $bg $bg $fg
+			focused_workspace  $bg $bg $fg
+        		active_workspace   $bg $bg $fg
+      			inactive_workspace $fg $fg $bg
         		urgent_workspace   $color1 $color1 $fg
 		}
 	status_command i3blocks
